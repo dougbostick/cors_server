@@ -5,7 +5,7 @@ const axios = require('axios');
 
 app.use(
   cors({
-    origin: 'https://dougbostick.github.io/react_halfway/',
+    origin: 'https://dougbostick.github.io',
   })
 );
 
