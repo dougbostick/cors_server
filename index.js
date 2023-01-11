@@ -5,14 +5,14 @@ const axios = require('axios');
 
 app.use(
   cors({
-    origin: 'http://localhost:3000/',
+    origin: 'https://dougbostick.github.io/react_halfway/',
   })
 );
 
 app.use(express.json());
 
 app.get('/message', (req, res, next) => {
-  res.send('message from express server');
+  res.send('message from express server!!');
 });
 
 app.post('/getPlaces', async (req, res, next) => {
