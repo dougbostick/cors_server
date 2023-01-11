@@ -20,6 +20,7 @@ app.get('/message', (req, res, next) => {
 
 app.get('/getPlaces', async (req, res, next) => {
   try {
+    console.log('PARAMS', req.params)
     const lat = req.params.lat;
     const lng = req.params.lng;
     const key = req.params.key;
