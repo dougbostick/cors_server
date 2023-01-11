@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const axios = require('axios');
 
-console.log(process.env);
+console.log(process.env.REACT_APP_API_KEY);
 
 
 app.use(
@@ -18,11 +18,11 @@ app.get('/message', (req, res, next) => {
   res.send('message from express server');
 });
 
-app.post('/getPlaces', async (req, res, next) => {
+app.get('/getPlaces', async (req, res, next) => {
   try {
-    const lat = req.body.lat;
-    const lng = req.body.lng;
-    const key = process.env.REACT_APP_API_KEY;
+    const lat = req.params.lat;
+    const lng = req.params.lng;
+    const key = req.params.key;
     const response = await axios.get(
       `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=500&type=restaurant&key=${key}`
     );
