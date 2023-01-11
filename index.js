@@ -21,9 +21,9 @@ app.get('/message', (req, res, next) => {
 app.get('/getPlaces', async (req, res, next) => {
   try {
     console.log('PARAMS', req.params)
-    const lat = req.params.lat;
-    const lng = req.params.lng;
-    const key = req.params.key;
+    const lat = req.query.lat;
+    const lng = req.query.lng;
+    const key = req.query.key;
     const response = await axios.get(
       `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${lat}%2C${lng}&radius=500&type=restaurant&key=${key}`
     );
