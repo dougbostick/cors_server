@@ -4,7 +4,6 @@ const cors = require('cors');
 const axios = require('axios');
 
 
-console.log('KEY', process.env.REACT_APP_API_KEY)
 app.use(
   cors({
     origin: 'https://dougbostick.github.io',
