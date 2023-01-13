@@ -13,7 +13,7 @@ app.use(
 app.use(express.json());
 
 app.get('/message', (req, res, next) => {
-  res.send('message from express server');
+  res.send('message from express server!!!');
 });
 
 app.get('/getPlaces', async (req, res, next) => {
